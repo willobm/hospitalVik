@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Agenda;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,7 @@ class EventoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'agenda_id' => Agenda::all()->random()->id
         ];
     }
 }

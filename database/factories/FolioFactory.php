@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Persona;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,8 @@ class FolioFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'persona_id' => Persona::all()->random()->id,
+
         ];
     }
 }

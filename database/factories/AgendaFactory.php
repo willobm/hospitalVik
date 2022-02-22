@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Profesional;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,7 @@ class AgendaFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'profesional_id' => Profesional::all()->random()->id
         ];
     }
 }

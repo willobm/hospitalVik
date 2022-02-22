@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('folios', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-
             $table->unsignedBigInteger('persona_id');
+            $table->timestamps();
+            
             $table->foreign('persona_id')->references('id')->on('personas')->onDelete('cascade');
         });
     }

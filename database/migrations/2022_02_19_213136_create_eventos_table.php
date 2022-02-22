@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('eventos', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('agenda_id');
             $table->timestamps();
 
-            $table->unsignedBigInteger('agenda_id');
             $table->foreign('agenda_id')->references('id')->on('agendas')->onDelete('cascade');
         });
     }
