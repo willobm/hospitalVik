@@ -14,7 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('eventos', function (Blueprint $table) {
-            $table->id();
+            $table->id();//autoincrement
+            $table->string("title",255);
+            $table->string("descripcion");//error tipo test
+            $table->string("status",255);//Error al poner 1
+            $table->dateTime("start");
+            $table->dateTime("end");
+
             $table->unsignedBigInteger('agenda_id');
             $table->timestamps();
 

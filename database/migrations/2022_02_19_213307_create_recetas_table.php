@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('recetas', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('slug');
+            $table->string('medicamento');
+            $table->string('dosis');
+            $table->string('periodo');
+            
             $table->unsignedBigInteger('folio_id');
             $table->timestamps();
 

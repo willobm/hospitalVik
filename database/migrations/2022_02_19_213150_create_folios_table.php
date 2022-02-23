@@ -15,6 +15,15 @@ return new class extends Migration
     {
         Schema::create('folios', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('slug');
+            $table->string('motivo');
+            $table->string('antecPersonales');
+            $table->string('AntcFamiliares');
+            $table->string('Enfermedades');
+            $table->string('Revision');
+            $table->string('Tratamiento');
+            
             $table->unsignedBigInteger('persona_id');
             $table->timestamps();
             

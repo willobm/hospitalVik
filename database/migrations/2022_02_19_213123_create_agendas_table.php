@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('agendas', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('slug');
+            $table->date('fechaInicio');
+            $table->date('fechaFin');
+            $table->enum('activo',[1, 2])->default(1);
+            
             $table->unsignedBigInteger('profesional_id');
             $table->timestamps();
 

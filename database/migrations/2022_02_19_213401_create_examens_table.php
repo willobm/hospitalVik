@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('examens', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('slug');
+            
             $table->unsignedBigInteger('folio_id');
             $table->timestamps();
 

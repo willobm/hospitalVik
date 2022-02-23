@@ -19,6 +19,7 @@ class ProfesionalFactory extends Factory
     public function definition()
     {
         return [
+            
             'persona_id' => Persona::all()->random()->id,
             'especialidad_id' => Especialidad::all()->random()->id
         ];

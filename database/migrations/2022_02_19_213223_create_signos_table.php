@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('signos', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('slug');
+            $table->string('valor');
+            $table->string('unidad');
+            $table->date('fechaT');
+            
             $table->unsignedBigInteger('folio_id');
             $table->timestamps();
 

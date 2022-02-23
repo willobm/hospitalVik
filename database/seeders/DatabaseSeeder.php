@@ -27,16 +27,18 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         $this->call(UserSeeder::class);
-        //$this->call(PersonaSeeder::class);
+        
         Especialidad::factory(8)->create();
         Persona::factory(9)->create();
+        
+        Profesional::factory(9)->create();
+        Agenda::factory(9)->create();
+        Evento::factory(9)->create();
+        
         Folio::factory(9)->create();
         Diagnostico::factory(9)->create();
         Signo::factory(9)->create();
         Receta::factory(9)->create();
         Examen::factory(9)->create();
-        Profesional::factory(9)->create();
-        Agenda::factory(9)->create();
-        Evento::factory(9)->create();
     }
 }

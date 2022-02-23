@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('diagnosticos', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('slug');
+            $table->string('codigo');
+
             $table->unsignedBigInteger('folio_id');
             $table->timestamps();
             
