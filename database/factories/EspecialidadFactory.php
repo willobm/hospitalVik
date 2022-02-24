@@ -22,7 +22,7 @@ class EspecialidadFactory extends Factory
         return [
             'name' => $name,
             'slug' => str::slug($name),
-            'descripcion' => $this->faker->text(255)
+            'descripcion' => $this->faker->text()
         ];
     }
 }
