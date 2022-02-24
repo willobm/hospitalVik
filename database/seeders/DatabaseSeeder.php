@@ -28,8 +28,9 @@ class DatabaseSeeder extends Seeder
 
         $this->call(UserSeeder::class);
         $this->call(EspecialidadSeeder::class);
+        $this->call(PersonaSeeder::class);
         //Especialidad::factory(8)->create();
-        Persona::factory(9)->create();
+        //Persona::factory(9)->create();
         
         Profesional::factory(9)->create();
         Agenda::factory(9)->create();

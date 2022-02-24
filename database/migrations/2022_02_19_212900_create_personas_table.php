@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
-            $table->string('cedula');
-            $table->string('telefono');
+            $table->string('cedula',10);
+            $table->string('telefono',15);
             $table->longText('direccion');
             $table->text('ciudad');
             $table->date('fechanac');
